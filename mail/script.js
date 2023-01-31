@@ -1,5 +1,5 @@
-//variabile email utente
-const userEmail = prompt("inserisci la tua email");
+//variabile pulsante
+const loginBtn = document.getElementById("login-btn");
 
 //variabile lista email 
 const emailList = [
@@ -11,20 +11,34 @@ const emailList = [
     "fff@gmail.com",
 ];
 
-//switch
-let inList = false;
+//evento
+loginBtn.addEventListener(
+    "click",
+    function(){
+        //variabile email utente
+        const userEmail = document.getElementById("user-email").value;
 
-for (let i = 0; i < emailList.length; i++) {
 
-    const currentEmail = emailList[i];
+        //switch
+        let inList = false;
 
-    if (currentEmail == userEmail) {
-        inList = true;
+        for (let i = 0; i < emailList.length; i++) {
+
+            const currentEmail = emailList[i];
+
+            if (currentEmail == userEmail) {
+                inList = true;
+            }
+        }
+
+        const loginOutput = document.getElementById("login-output");
+
+        if (inList == true) {
+            loginOutput.innerHTML = "Accesso riuscito";
+
+        } else {
+            loginOutput.innerHTML = "La tua email non risulta registrata";
+        }
+
     }
-}
-
-if (inList == true) {
-    console.log("puoi accedere");
-} else {
-    console.log("non puoi accedere");
-}
+)
