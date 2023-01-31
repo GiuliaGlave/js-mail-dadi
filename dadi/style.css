@@ -1,0 +1,33 @@
+body{
+    background-color: #c4ae95;
+}
+
+#player-dice,
+#pc-dice{
+    width: 10rem;
+    height: 10rem;
+    line-height: 10rem;
+    background-color: beige;
+}
+
+h1{
+    font-size: 5rem;
+    color: #75200f;
+}
+
+h2 {
+    font-size: 3rem;
+    color: #960101;
+}
+
+
+button{
+    background-color: black;
+    color: beige;
+    width: 5rem;
+    height: 5rem;
+    border-radius: 50%;
+    font-size: 1.5rem;
+    border: solid 4px #960101;
+    
+}
