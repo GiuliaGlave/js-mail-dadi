@@ -6,9 +6,41 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dadi</title>
 
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
+        crossorigin="anonymous"></script>
+    
     <script type="text/javascript" src="./script.js" defer></script>
 </head>
-<body>
-    
+
+ <body>
+    <div class="container">
+        <h1 class="text-center">Tira i dadi</h1>
+        <div class="row row-cols-2 justify-content-between">
+                <div class="col col-auto">
+                    il tuo dado
+                    <div id="player-dice">
+                        <span>?</span>
+                    </div>
+                </div>
+
+                <div class="col col-auto">
+                    il suo dado
+                    <div id="pc-dice">
+                        <span>?</span>
+                    </div>
+                </div>
+
+        </div>
+        <div class="d-flex justify-content-center">
+            <button type="button" id="play" >Gioca</button>
+        </div>
+        <div id="result" class="d-flex justify-content-center"></div>
+
+        </div>
+        
+    </div>  
 </body>
 </html>

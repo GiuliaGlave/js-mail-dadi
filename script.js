@@ -1,20 +1,40 @@
-//variabili numero giocatore e numero pc
+//pulsante
 
-const playerNumber = Math.floor((Math.random() * 6) + 1);
-console.log("giocatore " + playerNumber);
+const startGame = document.getElementById("play")
+const result = document.getElementById("result")
+const PlayerDice = document.getElementById("player-dice")
+const PcDice = document.getElementById("pc-dice")
 
-const pcNumber = Math.floor((Math.random() * 6) + 1);
-console.log("pc " + pcNumber);
+//evento
 
-//condizioni
+startGame.addEventListener(
+        "click",
+        function () {
+            //variabili numero giocatore e numero pc
 
-//vinci
-if (playerNumber > pcNumber) {
-    console.log(`${playerNumber} > ${pcNumber} hai vinto!`);
-//pareggi
-} else if (playerNumber == pcNumber) {
-    console.log(`${playerNumber} = ${pcNumber} hai pareggiato`);
-//perdi
-} else {
-    console.log(`${playerNumber} < ${pcNumber} hai perso`);
-}
+            const playerNumber = Math.floor((Math.random() * 6) + 1);            
+            const pcNumber = Math.floor((Math.random() * 6) + 1);
+
+            PlayerDice.innerHTML = playerNumber;
+            PcDice.innerHTML = pcNumber;
+
+            let resultGame;
+
+            //condizioni
+
+            //vinci
+            if (playerNumber > pcNumber) {
+                
+                resultGame = `hai vinto!`;
+                //pareggi
+            } else if (playerNumber == pcNumber) {
+                resultGame = `hai pareggiato`;
+                //perdi
+            } else {
+                resultGame = `hai perso`;
+            }
+
+            result.innerHTML = resultGame;
+        }
+    
+)
