@@ -15,6 +15,7 @@ const emailList = [
 loginBtn.addEventListener(
     "click",
     function(){
+        
         //variabile email utente
         const userEmail = document.getElementById("user-email").value;
 
@@ -31,13 +32,17 @@ loginBtn.addEventListener(
             }
         }
 
-        const loginOutput = document.getElementById("login-output");
+        const loginOutput1 = document.getElementById("login-output-1");
+        
+        const loginOutput2 = document.getElementById("login-output-2");
 
         if (inList == true) {
-            loginOutput.innerHTML = "Accesso riuscito";
+            loginOutput1.innerHTML = "Accesso riuscito";
+            loginOutput2.innerHTML = "";
 
         } else {
-            loginOutput.innerHTML = "La tua email non risulta registrata";
+            loginOutput2.innerHTML = `l'indirizzo email  "${userEmail}"  non risulta registrato`;
+            loginOutput1.innerHTML = "";
         }
 
     }
